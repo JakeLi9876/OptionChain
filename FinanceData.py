@@ -9,9 +9,9 @@ class FinanceData:
         self.ticker = ticker
 
     def getAskPrice(self):
-        askPrice = yf.Ticker(ticker).info.get('ask')
+        askPrice = yf.Ticker(self.ticker).info.get('ask')
         return askPrice
 
     def getBidPrice(self):
-        bidPrice = yf.Ticker(ticker).info.get('bid')
+        bidPrice = yf.Ticker(self.ticker).info.get('bid')
         return bidPrice
